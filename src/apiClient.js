@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "http://localhost:3001/";
+const url = "https://event-backend-florentinandtom.herokuapp.com/";
 
 export class ApiClient {
   constructor(tokenProvider,logoutHandler){
@@ -44,15 +44,22 @@ export class ApiClient {
     return this.authenticatedCall("get", url);
   }
 
-  addAd(name, location, summary, date ) {
-    return this.authenticatedCall("post", url, { name, location, summary, date });
+  getLocation(location) {
+    return this.authenticatedCall("get", `${url}events/${location}`)
+  }
+  queryResult(searchParams){
+    return this.authenticatedCall("post", `${url}events/search`, searchParams)
+  }
+
+  addAd(event, location, summary, date, time ) {
+    return this.authenticatedCall("post", url, { event, location, summary, date, time});
   }
 
   removeAd(id) {
     return this.authenticatedCall("delete", `${url}${id}`);
   }
 
-  updateAd(id, name, location,summary, date) {
-    return this.authenticatedCall("put", `${url}${id}`, { name, location, summary, date});
+  updateAd(id, event, location,summary, date,) {
+    return this.authenticatedCall("put", `${url}${id}`, { event, location, summary, date});
   }
 }

@@ -1,4 +1,5 @@
-# Ads App Starter Code
+# Event FrontEnd App
 
-Starter code for the Mongo Session
+Created by Florentin and Tom
+
 
