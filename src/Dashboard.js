@@ -70,8 +70,7 @@ function Dashboard(props) {
         <Row className="headerRow">
           <Col>
           <h1 className="header-title">Eventful App Dashboard</h1>
-          <h5 className="header-body">To add an event just click the 'Add a post' button or to find events in your area click 'Find Event'</h5>
-          {/* <a href="#Add"><button className="buttonMove">Click to go</button></a> */}
+          <h5 className="header-body">To add an event just click the 'Add a post' button or to find events click 'Find Event'</h5>
           </Col>
         </Row>
       <br />
