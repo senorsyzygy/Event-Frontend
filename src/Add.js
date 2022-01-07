@@ -44,7 +44,7 @@ function Add(props) {
         Event: <br />
         <input
           type="text"
-          defaultValue={props.currentAd?.event}
+          defaultValue={props.currentAd?.event || ""}
           name="event"
           disabled={disabled}
           placeholder="Event name"
@@ -54,7 +54,7 @@ function Add(props) {
         Location: <br />
         <input
           type="text"
-          defaultValue={props.currentAd?.location}
+          defaultValue={props.currentAd?.location || ""}
           name="adLocation"
           disabled={disabled}
           placeholder="Event location"
@@ -87,7 +87,7 @@ function Add(props) {
         <br />
         <input
           type="time"
-          defaultValue = {props.currentAd?.time}
+          defaultValue = {props.currentAd?.time || ""}
           name="time"
           disabled={disabled}
           required
