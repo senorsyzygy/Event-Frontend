@@ -25,6 +25,7 @@ function Dashboard(props) {
 
   const updateAdvert = (ad) => {
     cCurrent(ad);
+    setShow(!show)
   };
   const clearFunction = () => {
     updateAdvert(undefined)
